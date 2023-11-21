@@ -3,9 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #fff;
-    background-image: url("/indexResources/fondo-quesillo.jpg");
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: black;
 }
 
 header {
@@ -54,22 +52,46 @@ header img {
     height: 40px;
 }
 
+.about-us {
+    background-image: url("/indexResources/fondo-quesillo.jpg") ;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
 #team-photo {
-    height: 400px;
+    margin-top: 12px;
+    margin-left: 17.5px;
+    height: 375px;
     border-radius: 20px;
-    margin-left: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#team-photo:hover {
+    height: 390px;
+    margin-left: 8px;
+
 }
 
 .team-photo-container {
-    background-size: cover;
-    display: flex;
-}
-
-.about-us {
-    margin-left: 5%;
+    background-color: rgba(254, 0, 0, 0.61);    
+    border-radius: 10px;
+    display: inline-block;
     width: 600px;
+    margin-left: 100px;
 
 }
-.about-us p {
-    color: rgb(255, 0, 0);
+
+.about-us-text {
+    width: 550px;
+    margin-left: 20px;
 }
+.about-us-text p {
+    color: rgb(0, 0, 0);
+}
+
+.about-first {
+    background-color: black;
+}
+
