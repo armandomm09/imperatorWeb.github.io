@@ -59,36 +59,12 @@ header img {
     height: 1000px;
 }
 
-#team-photo {
-    margin-top: 12px;
-    margin-left: 17.5px;
-    height: 375px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-#team-photo:hover {
-    height: 390px;
-    margin-left: 8px;
-
-}
-
-.team-photo-container {
-    background-color: rgba(254, 0, 0, 0.61);    
-    border-radius: 10px;
-    display: inline-block;
-    width: 600px;
-    margin-left: 100px;
-
-}
-
-
 .about-us-text p {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
-.about-first {
-    background-color: black;
-}
 
+
+.home-page-info {
+    background-color: white;
+}
