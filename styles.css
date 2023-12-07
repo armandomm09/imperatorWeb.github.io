@@ -1,5 +1,7 @@
+
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     color: #fff;
@@ -52,6 +54,7 @@ header img {
     height: 40px;
 }
 
+
 .about-us {
     background-image: url("/indexResources/fondo-quesillo.jpg") ;
     background-size: cover;
@@ -59,10 +62,39 @@ header img {
     height: 1000px;
 }
 
-.about-us-text p {
-    color: rgb(0, 0, 0);
+
+.info-container {
+    display: grid;
+    grid-row: 2;
+    grid-column: 2;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: 50px 50px;
+    gap : 20px; 
 }
 
+
+
+.about-us-row p {
+    color: rgb(255, 255, 255);
+}
+
+.about-us-column1 {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.about-us-column2 {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.about-us-row {
+    grid-row: 2;
+}
+
+.about-first-row p {
+    color: rgb(253, 251, 251);
+}
 
 
 .home-page-info {
