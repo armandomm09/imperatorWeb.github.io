@@ -9,15 +9,18 @@ body {
 }
 
 header {
-    background-color: rgba(203, 75, 75, 0.513);
-    display: block;
-    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
     padding: 20px;
-    height: 90px;
+    height: 110px;
     width: 100%;
     position: fixed;
+    
 }
 
+header nav{
+    margin-left: 575px;
+}
 
 header ul {
     list-style-type: none;
@@ -28,7 +31,8 @@ header ul {
 }
 
 header ul li {
-    margin-right: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 header ul li:hover {
@@ -47,7 +51,10 @@ header img {
 
 
 #logo-engrane {
-    height: 40px;
+    height: 100px;
+    width: auto;
+
+    border-radius: 10px;
 }
 
 #logo-nombre {
@@ -59,44 +66,161 @@ header img {
     background-image: url("/indexResources/fondo-quesillo.jpg") ;
     background-size: cover;
     background-attachment: fixed;
-    height: 1000px;
+    height:950px;
+}
+
+.presponsors{
+    background-image: url("/indexResources/P1011767.JPG") ;
+    filter: grayscale(100%);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
 }
 
 
-.info-container {
+/**GRID*/
+
+
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3em;
+    color: white;
+
+}
+
+.container {
+    background-color:  rgb(17,17,17);
+    border: 3px solid black;
+    border-radius: 30px;
+    /*grid goes to container */
     display: grid;
-    grid-row: 2;
-    grid-column: 2;
-    grid-template-columns: 50% 50%; 
-    grid-template-rows: 50px 50px;
-    gap : 20px; 
+
+    /* usar frs?*/
+    /*grid-template-columns: 1fr 2fr;*/
+
+    /*usar repeat*/
+    grid-template-rows: repeat(4, auto);
+
+    /*use auto rows?*/
+    /*grid-auto-rows: 250px;*/
+
+    /* hacerla responsive con minimos*/
+    grid-template-columns: 30% 1fr 1fr; 
+
+    /*keep proportions*/
+    box-sizing: border-box;
+
+    /*otra forma*/
+    /*
+    grid-template-columns: repeat( 
+        auto-fill,
+        minmax(400px, 2fr)
+    );
+       
+    */
+ 
 }
 
-
-
-.about-us-row p {
-    color: rgb(255, 255, 255);
+.container div {
+    background-color: rgb(238, 39, 55);
+    border-radius: 10px;
+    margin: 10px;
+    
 }
 
-.about-us-column1 {
-    grid-row: 1;
-    grid-column: 1;
-}
-
-.about-us-column2 {
-    grid-row: 2;
-    grid-column: 2;
-}
-
-.about-us-row {
-    grid-row: 2;
-}
-
-.about-first-row p {
-    color: rgb(253, 251, 251);
-}
-
-
-.home-page-info {
+.container #about-us-image > img{
+    /*background-image: url("/resources/fotos/84D28EE2-A2C8-49AF-B623-3DC81CD4B154_1_105_c.jpeg");*/
+    /*background-size: cover;*/
     background-color: white;
+    width: 100%;
+    height: 100%;
+    /*images mantain aspect ratio */
+    /*object-fit: cover;*/
+    border-radius: 10px;
+    
+}
+
+.container #about-us-image {
+    grid-column-start: 1;
+
+}
+
+
+.container #about-us-info {
+    background-color: rgb(238, 39, 55);
+    /* column span */
+    grid-column-start: span 2;
+    text-align: center;
+    padding: 10px 20px;
+    
+    
+}
+.container #about-first-info {
+    background-color: rgb(238, 39, 55);
+    grid-column-start: span 2;
+    text-align: center;
+    padding: 10px 20px;
+    
+
+
+}
+/*
+.container #about-first-image > img{
+    width: auto;
+    height: 100px;
+    object-fit: cover;
+    
+    
+}*/
+.container #about-first-image {
+    background-image: url(/indexResources/fotos_grid/PHOTO-2023-11-06-19-50-58.jpg);
+    background-size: cover;
+    background-attachment: local;
+    
+}
+
+
+.container #mission-image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
+.container #mission-info {
+    background-color: rgb(238, 39, 55);
+    /* column span */
+    grid-column-start: span 2;
+    text-align: center;
+    padding: 10px 20px;
+    
+}
+
+.container #vission-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container #vission-info {
+    background-color: rgb(238, 39, 55);
+    /* column span */
+    grid-column-start: span 2;
+    text-align: center;
+    padding: 10px 20px;
+    
+}
+
+/* media queries */
+@media only screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: auto;
+    }
 }
