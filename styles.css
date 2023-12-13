@@ -95,8 +95,8 @@ h2 {
 }
 
 .container {
-    background-color:  rgb(17,17,17);
-    border: 3px solid black;
+    background-color:  rgba(255, 255, 255, 0);
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 30px;
     /*grid goes to container */
     display: grid;
@@ -106,7 +106,6 @@ h2 {
 
     /*usar repeat*/
     grid-template-rows: repeat(4, auto);
-
     /*use auto rows?*/
     /*grid-auto-rows: 250px;*/
 
