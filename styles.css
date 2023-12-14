@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
     font-family: 'Inter', sans-serif;
@@ -15,18 +15,20 @@ header {
     height: 110px;
     width: 100%;
     position: fixed;
+    z-index: 3;
+    animation: navLoad 1.5s;
     
 }
 
 header nav{
-    margin-left: 575px;
+    margin-left: 560px;
 }
 
 header ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    margin-top: 20px;
+    margin-top: 35px;
     margin-left: 20px;
 }
 
@@ -35,8 +37,9 @@ header ul li {
     margin-left: 40px;
 }
 
+
 header ul li:hover {
-    font-size: 20px;    
+    background: rgb(231, 0, 0);
 }
 
 header a {
@@ -47,6 +50,7 @@ header a {
 
 header img {
     padding: 5px;
+    margin-top: -40px !important;
 }
 
 
@@ -63,20 +67,43 @@ header img {
 
 
 .about-us {
-    background-image: url("/indexResources/fondo-quesillo.jpg") ;
+    background: url("/indexResources/fondo-quesillo.jpg");
     background-size: cover;
     background-attachment: fixed;
-    height:950px;
+    height:1000px;
+    width:100%;
+    min-width: 1110px;
+    display: flex;    
+    justify-content: center;
+    
 }
 
-.presponsors{
-    background-image: url("/indexResources/P1011767.JPG") ;
-    filter: grayscale(100%);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 500px;
+.about-us img {
+    width: auto;
+    height: 370px;
+    margin-top: 345px;
+    animation: transitionIn 3s
 }
 
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes navLoad{
+    from{
+        transform: translateY(-100%);
+    } to {
+        transform: translateY(0);
+        
+    }
+}
 
 /**GRID*/
 
@@ -94,7 +121,7 @@ h2 {
 
 }
 
-.container {
+.about-container {
     background-color:  rgba(255, 255, 255, 0);
     border: 3px solid rgb(0, 0, 0);
     border-radius: 30px;
@@ -126,14 +153,14 @@ h2 {
  
 }
 
-.container div {
+.about-container div {
     background-color: rgb(238, 39, 55);
     border-radius: 10px;
     margin: 10px;
     
 }
 
-.container #about-us-image > img{
+.about-container #about-us-image > img{
     /*background-image: url("/resources/fotos/84D28EE2-A2C8-49AF-B623-3DC81CD4B154_1_105_c.jpeg");*/
     /*background-size: cover;*/
     background-color: white;
@@ -145,13 +172,13 @@ h2 {
     
 }
 
-.container #about-us-image {
+.about-container #about-us-image {
     grid-column-start: 1;
 
 }
 
 
-.container #about-us-info {
+.about-container #about-us-info {
     background-color: rgb(238, 39, 55);
     /* column span */
     grid-column-start: span 2;
@@ -160,7 +187,7 @@ h2 {
     
     
 }
-.container #about-first-info {
+.about-container #about-first-info {
     background-color: rgb(238, 39, 55);
     grid-column-start: span 2;
     text-align: center;
@@ -177,7 +204,7 @@ h2 {
     
     
 }*/
-.container #about-first-image {
+.about-container #about-first-image {
     background-image: url(/indexResources/fotos_grid/PHOTO-2023-11-06-19-50-58.jpg);
     background-size: cover;
     background-attachment: local;
@@ -185,7 +212,7 @@ h2 {
 }
 
 
-.container #mission-image > img{
+.about-container #mission-image > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -193,7 +220,7 @@ h2 {
     
 }
 
-.container #mission-info {
+.about-container #mission-info {
     background-color: rgb(238, 39, 55);
     /* column span */
     grid-column-start: span 2;
@@ -202,13 +229,13 @@ h2 {
     
 }
 
-.container #vission-image > img {
+.about-container #vission-image > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.container #vission-info {
+.about-container #vission-info {
     background-color: rgb(238, 39, 55);
     /* column span */
     grid-column-start: span 2;
@@ -219,7 +246,94 @@ h2 {
 
 /* media queries */
 @media only screen and (max-width: 480px) {
-    .container {
+    .about-container {
         grid-template-columns: auto;
     }
 }
+
+
+/**************************** SPONSORS ****************************/
+
+.presponsors{
+    background-image: url("/indexResources/fieldAndDS.png") ;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+}
+
+
+
+.container{
+    padding-top: 50px;
+    align-items: center !important;
+    font-family: 'Poppins', sans-serif !important;
+    background-attachment: fixed;
+   /* background-color: grey !important;*/
+
+}
+
+
+
+.sponsors-container h2{
+    text-align: center;
+    padding: 20px;
+}
+
+#ROMIHN {
+    margin-top: 150px;
+}
+
+#Prepatec {
+    margin-top: 125px;
+    
+}
+
+#DIM {
+    margin-top: 60px;
+}
+
+.slick-slide{
+    margin: 0 40px;
+}
+
+.slick-slide img{
+    width: 100%;
+
+   
+}
+.slick-slider{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.copy{
+    padding-top: 250px;
+    align-content: center;
+
+}
+
