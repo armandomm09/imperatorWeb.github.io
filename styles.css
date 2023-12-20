@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@font-face {
+    font-family: Industry;
+    src: url("/Industry-BoldItalic.ttf");
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -53,6 +58,11 @@ header img {
     margin-top: -40px !important;
 }
 
+#sponsors h2 {
+    font-family: 'Inter';
+    text-align: center;
+    font-size: clamp(50px, 60px, 80px);
+}
 
 #logo-engrane {
     height: 100px;
@@ -114,9 +124,10 @@ p {
     font-size: 15px;
 }
 
-h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3em;
+h2:not(#sponsors) {
+    font-family: 'industry';
+    font-weight: 100;
+    font-size: clamp(60px, 80px, 200px);
     color: white;
 
 }
@@ -193,8 +204,6 @@ h2 {
     text-align: center;
     padding: 10px 20px;
     
-
-
 }
 /*
 .container #about-first-image > img{
@@ -268,6 +277,7 @@ h2 {
     align-items: center !important;
     font-family: 'Poppins', sans-serif !important;
     background-attachment: fixed;
+    text-align: center;
    /* background-color: grey !important;*/
 
 }
