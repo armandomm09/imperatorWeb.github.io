@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="/slideshow.js"></script>
+
+    
     <title>Imperator 5887</title>
    <link rel="stylesheet" href="styles.css">
 
@@ -10,62 +19,79 @@
 <body>
 
     <header>
-        <div class="header">
-                <img src="/indexResources/Engrane.png" id="logo-engrane" />
-                <img src="/indexResources/nombree.png" id="logo-nombre" />
-
+                
             <nav>    
                 <ul>
-                    <li><a href="#about-us-text">About Us</a></li>
-                    <li><a href="#members">FIRST</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                    <li><a href="#about">Us</a></li>
+                    <li><a href="#about-us-text">About Us</a></li> 
+                    <li><a href="#about-first-info">FIRST</a></li> 
+                    <li><a href="index.html"></a><img src="/indexResources/5887redLogo.png" id="logo-engrane"/></li>
                     <li><a href="#sponsors">Sponsors</a></li>
                     <li><a href="#podcast">Podcast</a></li>
                 </ul>
             </nav>    
-        </div>
 
     </header>
    
-    <div class="about-us"></div>
- 
-    <div class="home-page-info">
+   
+    <div class="about-us" >
+        <img src="/indexResources/imperatorHorizontalLogo.png">
+    </div>
 
-        <div class="about-us-text" id="about-us-text">
-
-            <p>FRC Team Imperator 5887 is a high school robotics team based in Tecnologico de Monterrey Campus Puebla. Founded in 2016, our team not only competes in
-                the First Robotics Competition, but we also focus on inspiring youger generations to pursue success in STEAM areas regardless of their age, gender and origin. As a team, we <strong> believe </strong>
-                that science is for everyone! 
-                Membership is open to all high school students in Tecnologico de Monterrey Campus Puebla. Contact us <span id="aboutus-contact-us-link">here</span> if you want to take part of our community!
-                <span id="about-us-learn-more">Learn More...</span></p>
-                
-        </div>
-        <div class="about-first">
-
-            <p> 
-                FIRST (For Inspiration and Recognition of Science and Technology) is a global organization inspiring a love for science and technology in youth. Through captivating robotics programs, 
-                students design, build, and program robots, cultivating vital STEM skills. This hands-on experience fosters teamwork, innovation, 
-                and a commitment to problem-solving. Joining a FIRST team offers not just technical growth but also a close-knit community, providing
-                support and encouragement for a lifelong journey in STEM.
-
-            </p>
-        </div>
-
-        <div class="sponsors-homepage">
+                <!-- SKELETON -->
+    <section class = "about-container">
+        
+        
+       
             
-            <h3>We are exceedingly grateful with our sponsors for making this challenge become an attainable oportunity of success!
-                If you are interested in supporting us, contact us <span id="sponsors-contact-us-link">here</span>.
-
-                <img src="/indexResources/sponsors/SL&F.png" height="80" width="auto" id="superlasser-logo"/>
-                <img src="/indexResources/sponsors/ROMIHN LOGO.png" height="80" width="auto" id="romihn-logo"/>
-                <img src="/indexResources/sponsors/Hilton.png" height="80" width="auto" id="hilton-logo"/>
-                <img src="/indexResources/sponsors/bauher film.png" height="80" width="auto" id="bauherfilm-logo"/>
-                <img src="/indexResources/sponsors/Dim.png" height="80" width="auto" id="dim-logo"/>
-
-
+        <div id = "about-first-info">
+            <h2>FIRST</h2>
+            <p> FIRST (For Inspiration and Recognition of Science and Technology) is a global organization inspiring a love for science and technology in youth. Through captivating robotics programs, students design, build, and program robots, cultivating vital STEM skills. This hands-on experience fosters teamwork, innovation, and a commitment to problem-solving. Joining a FIRST team offers not just technical growth but also a close-knit community, providing support and encouragement for a lifelong journey in STEM. </p>
         </div>
+        <div id = "about-first-image">
+            <!--<img src = "/indexResources/fotos_grid/PHOTO-2023-11-06-19-50-58.jpg" alt="ventura">-->
+        </div>
+
+        <div id = "about-us-image">
+            <img src="/indexResources/fotos_grid/84D28EE2-A2C8-49AF-B623-3DC81CD4B154_1_105_c.jpeg" alt="team">
+        </div>
+       
+        <div id = "about-us-info">
+            <h2>ABOUT OUR TEAM</h2>
+            <p>
+                FRC Team Imperator 5887 is a high school robotics team based in Tecnologico de Monterrey Campus Puebla. Founded in 2016, our team not only competes in the First Robotics Competition, but we also focus on inspiring youger generations to pursue success in STEAM areas regardless of their age, gender and origin. As a team, we believe that science is for everyone! Membership is open to all high school students in Tecnologico de Monterrey Campus Puebla.
+            </p> <br>
+            <a><button>Learn More...</button></a>
+        </div>
+       
+  
+
+    </div>
+    </section>
+
+
+<div class="presponsors">
+
+
+
+<div class="container">
+    <h2 class="text-center font-weight-bold">Our Sponsors</h2>
+    <section class="customer-logos slider">
+        <div class="slide" id="Hilton"><img src="/indexResources/sponsors/Hilton.png" alt="logo"></div>
+        <div class="slide" id ="PEMSA"><img src="/indexResources/sponsors/PEMSA.png" alt="logo"></div>
+        <div class="slide" id="Bahuer"><img src="/indexResources/sponsors/bauher film.png" alt="logo"></div>
+        <div class="slide" id="DIM"><img src="/indexResources/sponsors/Dim.png" alt="logo"></div>
+        <div class="slide" id="ROMIHN"><img src="/indexResources/sponsors/ROMIHN.png" alt="logo"></div>
+        <div class="slide" id="Prepatec"><img src="/indexResources/sponsors/PrepaTec.png" alt="logo"></div>
+       
+    
+    </section>
+
+<p class="copy text-center font-weight-bold">All Rights Reserved </p>
+
 </div>
+
+    </div>
+
     <footer id = "contact-us">
         <h2>Contact us!</h2>
         <p>Send us a message through our <span id="our-email">team email</span>. </p>
