@@ -6,17 +6,20 @@ body {
     padding: 0;
     color: #fff;
     background-color: black;
+    width: auto;
 }
 
 header {
     background-color: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 33%, rgba(0, 0, 0, 0));
+    backdrop-filter: linear-gradient(to bottom, rgba(0,0,0,0), blur(10px));
     display: inline-block;
     padding: 20px;
     height: 110px;
     width: 100%;
     position: fixed;
     z-index: 3;
-    animation: navLoad 1.5s;
+   /*animation: navLoad 3s;*/
     
 }
 
@@ -29,18 +32,44 @@ header ul {
     padding: 0;
     display: flex;
     margin-top: 35px;
-    margin-left: 20px;
 }
 
-header ul li {
-    margin-right: 40px;
-    margin-left: 40px;
+.headerLi {
+    
+    margin-right: 0px;
+    margin-left: 0px;
+
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    height: 20px;
+}
+
+.headerLi:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+
+}
+.headerLi:active {
+    transform: scale(0.9);
+}
+
+#liLogo {
+    height: 90px;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+#liLogo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 
-header ul li:hover {
-    background: rgb(231, 0, 0);
-}
 
 header a {
     text-decoration: none;
@@ -73,16 +102,32 @@ header img {
     height:1000px;
     width:100%;
     min-width: 1110px;
-    display: flex;    
     justify-content: center;
-    
+
 }
 
-.about-us img {
+.about-us::before {
+    filter: blur(0.5px);
+}
+
+.about-us #imperatorHorizontal {
     width: auto;
-    height: 370px;
+    height: 350px;
     margin-top: 345px;
     animation: transitionIn 3s
+}
+/*
+.aboutUsPhotos{
+    background: transparent;
+    backdrop-filter: blur(10px);
+}*/
+
+.about-us #wiringTheFuture {
+    width: auto;
+    height: 100px;
+    margin-left: 700px;
+    animation: transitionIn 3s
+
 }
 
 @keyframes transitionIn {
@@ -160,21 +205,25 @@ h2 {
     
 }
 
-.about-container #about-us-image > img{
+/*.about-container #about-us-image > img{
     /*background-image: url("/resources/fotos/84D28EE2-A2C8-49AF-B623-3DC81CD4B154_1_105_c.jpeg");*/
-    /*background-size: cover;*/
+    /*background-size: cover;
     background-color: white;
     width: 100%;
     height: 100%;
     /*images mantain aspect ratio */
-    /*object-fit: cover;*/
+    /*object-fit: cover;
     border-radius: 10px;
     
-}
+}*/
 
 .about-container #about-us-image {
     grid-column-start: 1;
-
+    background-image: url("/indexResources/fotos_grid/84D28EE2-A2C8-49AF-B623-3DC81CD4B154_1_105_c.jpeg");
+    /*background-size: cover;*/
+    background-size: cover;
+    background-attachment: local;
+    
 }
 
 
@@ -336,4 +385,43 @@ h2 {
     align-content: center;
 
 }
+/*
+#learnAboutUs-button {
+    background-color: rgb(76, 7, 7);
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+}
 
+/******BUTTON*/
+
+/* Botones */
+.aboutButtons {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    border-color: #620505;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilos iniciales para el botón */
+.aboutButtons {
+    background-color: rgb(238, 39, 55);
+}
+
+/* Efecto de hover para el botón */
+.aboutButtons:hover {
+    background-color: rgb(114, 5, 5, 0.5);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Animación para cuando el botón es presionado */
+.aboutButtons:active {
+    transform: scale(0.9);
+}
