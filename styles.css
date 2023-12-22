@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* pa' la chamba responsive */
+/*
+* {
+    border: 2px solid red !important;
+}
+*/
 @font-face {
     font-family: Industry;
     src: url("/Industry-BoldItalic.ttf");
@@ -22,11 +28,20 @@ header {
     position: fixed;
     z-index: 3;
     animation: navLoad 1.5s;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
     
 }
 
 header nav{
-    margin-left: 560px;
+    /*margin-left: 560px;*/
+    display: flex;
+    align-items: center;
+    align-self: center;
+
 }
 
 header ul {
@@ -58,6 +73,8 @@ header img {
     margin-top: -40px !important;
 }
 
+
+
 #sponsors h2 {
     font-family: 'Inter';
     text-align: center;
@@ -81,18 +98,28 @@ header img {
     background-size: cover;
     background-attachment: fixed;
     height:1000px;
-    width:100%;
-    min-width: 1110px;
     display: flex;    
     justify-content: center;
-    
+    align-items: center;
 }
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*
+ADD MEDIA QUERY TO DECREASE IMAGE HEIGHT WHEN ON MOBILES.
+
+
+*/
+
+
 .about-us img {
-    width: auto;
-    height: 370px;
-    margin-top: 345px;
-    animation: transitionIn 3s
+   
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    animation: transitionIn 3s;
+    align-self: center;
+    display: block;
+    
 }
 
 @keyframes transitionIn {
@@ -124,18 +151,19 @@ p {
     font-size: 15px;
 }
 
-h2:not(#sponsors) {
+h2 {
     font-family: 'industry';
     font-weight: 100;
     font-size: clamp(60px, 80px, 200px);
     color: white;
+    text-transform: uppercase;
 
 }
 
 .about-container {
-    background-color:  rgba(255, 255, 255, 0);
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 30px;
+   /* background-color:  rgba(255, 255, 255, 0);*/
+    /*border: 3px solid rgb(0, 0, 0);*/
+
     /*grid goes to container */
     display: grid;
 
@@ -164,10 +192,11 @@ h2:not(#sponsors) {
  
 }
 
-.about-container div {
+.about-container div:not(#about-us-info) {
     background-color: rgb(238, 39, 55);
-    border-radius: 10px;
-    margin: 10px;
+    /*border-radius: 10px;*/
+    /*margin: 20px;*/
+    min-height: 500px;
     
 }
 
@@ -179,7 +208,7 @@ h2:not(#sponsors) {
     height: 100%;
     /*images mantain aspect ratio */
     /*object-fit: cover;*/
-    border-radius: 10px;
+
     
 }
 
@@ -188,13 +217,22 @@ h2:not(#sponsors) {
 
 }
 
+.about-container p {
+    padding: 3rem 50px;
+    font-size: clamp(1rem, 1.5rem, 2rem);
+    line-height: 2rem;
+    margin-top: 1rem;
+
+}
+
 
 .about-container #about-us-info {
-    background-color: rgb(238, 39, 55);
+    background-color: rgb(17,17,17);
     /* column span */
     grid-column-start: span 2;
     text-align: center;
     padding: 10px 20px;
+    min-height: 524px;
     
     
 }
@@ -203,6 +241,8 @@ h2:not(#sponsors) {
     grid-column-start: span 2;
     text-align: center;
     padding: 10px 20px;
+    min-height: 524px;
+    
     
 }
 /*
@@ -214,16 +254,18 @@ h2:not(#sponsors) {
     
 }*/
 .about-container #about-first-image {
-    background-image: url(/indexResources/fotos_grid/PHOTO-2023-11-06-19-50-58.jpg);
+    background-image: url(/indexResources/team-photo.jpeg);
     background-size: cover;
-    background-attachment: local;
+    width: auto;
+    height: auto;
+    /*background-attachment: local;*/
     
 }
 
 
 .about-container #mission-image > img{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     
     
@@ -238,10 +280,10 @@ h2:not(#sponsors) {
     
 }
 
-.about-container #vission-image > img {
+.about-container #about-first-image > img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .about-container #vission-info {
@@ -254,9 +296,9 @@ h2:not(#sponsors) {
 }
 
 /* media queries */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1200px) {
     .about-container {
-        grid-template-columns: auto;
+        grid-template-columns: 1;
     }
 }
 
@@ -267,7 +309,8 @@ h2:not(#sponsors) {
     background-image: url("/indexResources/fieldAndDS.png") ;
     background-size: cover;
     background-attachment: fixed;
-    height: 800px;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -275,18 +318,28 @@ h2:not(#sponsors) {
 .container{
     padding-top: 50px;
     align-items: center !important;
-    font-family: 'Poppins', sans-serif !important;
     background-attachment: fixed;
     text-align: center;
+    height: auto;
+   
    /* background-color: grey !important;*/
 
 }
 
+.container p {
+    padding: 3rem;
+    align-self: center;
+}
 
+.container h2 {
+    padding: 10px;
+    margin: 10px;
+}
 
 .sponsors-container h2{
     text-align: center;
     padding: 20px;
+   
 }
 
 #ROMIHN {
@@ -307,9 +360,9 @@ h2:not(#sponsors) {
 }
 
 .slick-slide img{
-    width: 100%;
+    width: 50%;
+    height: 50%;
 
-   
 }
 .slick-slider{
     position: relative;
@@ -337,6 +390,7 @@ h2:not(#sponsors) {
 }
 .slick-slide img{
     display: block;
+    margin: auto;
 }
 .slick-initialized .slick-slide{
     display: block;
@@ -347,3 +401,32 @@ h2:not(#sponsors) {
 
 }
 
+footer {
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ------ BUTTONS ---------- */
+button {
+    font-family:'Inter', sans-serif;
+    color: rgb(238, 39, 55);
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 12rem;   
+    background-color: transparent;
+    border: 4px solid  rgb(238, 39, 55);
+    /* transition */
+    box-shadow: inset 0 0 0 0  rgb(238, 39, 55);
+    transition: ease-out 0.3s;
+    outline: none;
+}
+
+button:hover {
+    box-shadow: inset 12rem 0 0 0  rgb(238, 39, 55);
+    color: white;
+    cursor: pointer;
+    
+}
