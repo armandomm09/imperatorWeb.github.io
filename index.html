@@ -6,6 +6,8 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/38d6679d61.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -18,13 +20,13 @@
 </head>
 <body>
 
-    <header>
+    <header id="imp-principal" >
                 
             <nav>    
                 <ul>
-                    <li><a href="#about-us-text">About Us</a></li> 
-                    <li><a href="#about-first-info">FIRST</a></li> 
-                    <li><a href="index.html"></a><img src="/indexResources/5887redLogo.png" id="logo-engrane"/></li>
+                    <li><a href="#grid-about-us">About Us</a></li> 
+                    <li><a href="#grid-about-us">FIRST</a></li> 
+                    <li><a id="logo-a" href="#imp-principal"></a><img src="/indexResources/5887redLogo.png" id="logo-engrane"/></li>
                     <li><a href="#sponsors">Sponsors</a></li>
                     <li><a href="#podcast">Podcast</a></li>
                 </ul>
@@ -32,22 +34,24 @@
 
     </header>
    
-   
+
     <div class="about-us" >
         <div class="about-us-image">
             <img src="/indexResources/imperatorHorizontalLogo.png">
         </div>
     </div>
 
+
                 <!-- SKELETON -->
-    <section class = "about-container">
+    <section id="grid-about-us" class="about-container">
         
         
        
             
-        <div id = "about-first-info" class="info-square">
-            <h2>FIRST</h2>
+        <div id="about-first-info" class="info-square">
+            <h2 id="FIRST">FIRST</h2>
             <p> FIRST (For Inspiration and Recognition of Science and Technology) is a global organization inspiring a love for science and technology in youth. Through captivating robotics programs, students design, build, and program robots, cultivating vital STEM skills. This hands-on experience fosters teamwork, innovation, and a commitment to problem-solving. Joining a FIRST team offers not just technical growth but also a close-knit community, providing support and encouragement for a lifelong journey in STEM. </p>
+            <a href="https://www.firstinspires.org/about"><button id="white-button">Learn More...</button></a>
         </div>
         <div id = "about-first-image">
             <!--<img src = "/indexResources/fotos_grid/PHOTO-2023-11-06-19-50-58.jpg" alt="ventura">-->
@@ -77,6 +81,7 @@
     </section>
 
 
+
 <div class="presponsors">
 
 
@@ -102,9 +107,16 @@
 
     <footer id = "contact-us">
         <h2>Contact us!</h2>
-        <p>Send us a message through our <span id="our-email">team email</span>. </p>
+        <p>Send us a message or check out our socials! </p>
         <!-- logos -->
-        <img src="/indexResources/mail-64.png">
+        <div class="contact-us-logos">
+            <nav><img id="mail" src="/indexResources/mail-64.png"></nav>
+            <nav><i class="fa-brands fa-instagram fa-4x"></i></nav>
+            <nav><i class="fa-brands fa-spotify fa-4x"></i></nav>
+            <nav><i class="fa-brands fa-github fa-4x"></i></nav>
+            <nav><i class="fa-brands fa-discord fa-4x"></i></nav>
+        </div>
+
         
 
     </footer>
