@@ -6,10 +6,13 @@
     border: 2px solid yellow!important;
 }
 */
+
 @font-face {
     font-family: Industry;
     src: url("/Industry-BoldItalic.ttf");
 }
+
+/* GENERAL */
 
 body {
     font-family: 'Inter', sans-serif;
@@ -18,6 +21,8 @@ body {
     color: #fff;
     background-color: black;
 }
+
+/* HEADER */
 
 header {
     background-color: rgb(0, 0, 0);
@@ -64,8 +69,6 @@ header ul li {
     display: flex;
     border-radius: 2px;
 
-    /*border: 2px solid cyan;*/
-
 }
 
 
@@ -88,7 +91,6 @@ header a {
     font-weight: bold;
     margin: 0;
     padding: 0.5rem;
-    /*border: 2px solid cyan;*/
 
 }
 
@@ -97,8 +99,6 @@ header img {
     align-self: center;
     margin-left: -10px;
 }
-
-
 
 #sponsors h2 {
     font-family: 'Inter';
@@ -128,12 +128,6 @@ header img {
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/*
-ADD MEDIA QUERY TO DECREASE IMAGE HEIGHT WHEN ON MOBILES.
-
-
-*/
-
 
 .about-us img {
    
@@ -166,8 +160,7 @@ ADD MEDIA QUERY TO DECREASE IMAGE HEIGHT WHEN ON MOBILES.
     }
 }
 
-/**GRID*/
-
+/*GRID*/
 
 
 p {
@@ -186,60 +179,21 @@ h2 {
 }
 
 .about-container {
-   /* background-color:  rgba(255, 255, 255, 0);*/
-    /*border: 3px solid rgb(0, 0, 0);*/
-
+   
     /*grid goes to container */
     display: grid;
 
-    /* usar frs?*/
-    /*grid-template-columns: 1fr 2fr;*/
-
     /*usar repeat*/
-    grid-template-rows: repeat(4, auto);
-    /*use auto rows?*/
-    /*grid-auto-rows: 250px;*/
-
-    /* hacerla responsive con minimos*/
+    grid-template-rows: repeat(2, auto);
     grid-template-columns: 30% 1fr 1fr; 
 
     /*keep proportions*/
     box-sizing: border-box;
-    /*otra forma*/
-    /*
-    grid-template-columns: repeat( 
-        auto-fill,
-        minmax(400px, 2fr)
-    );
-       
-    */
+   
  
 }
 
-.about-container div:not(#about-us-info) {
-    background-color: rgb(238, 39, 55);
-    /*border-radius: 10px;*/
-    /*margin: 20px;*/
-    min-height: 500px;
-    
-}
-
-.about-container #about-us-image > img{
-    /*background-image: url("/resources/fotos/84D28EE2-A2C8-49AF-B623-3DC81CD4B154_1_105_c.jpeg");*/
-    /*background-size: cover;*/
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    /*images mantain aspect ratio */
-    /*object-fit: cover;*/
-
-    
-}
-
-.about-container #about-us-image {
-    grid-column-start: 1;
-
-}
+/* CONTAINERS */
 
 .about-container p {
     padding: 0 50px;
@@ -257,73 +211,43 @@ h2 {
     text-align: center;
     padding: 10px 20px;
     min-height: 524px;
-    
-    
+       
 }
+
 .about-container #about-first-info {
     background-color: rgb(238, 39, 55);
     grid-column-start: span 2;
     text-align: center;
     padding: 10px 20px;
     min-height: 524px;
-    
-    
-}
-/*
-.container #about-first-image > img{
-    width: auto;
-    height: 100px;
-    object-fit: cover;
-    
-    
-}*/
-.about-container #about-first-image {
-    background-image: url(/indexResources/team-photo.jpeg);
-    background-size: cover;
-    width: auto;
-    height: auto;
-    /*background-attachment: local;*/
-    
+        
 }
 
+/* IMAGES */
 
-.about-container #mission-image > img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    
-    
-}
-
-.about-container #mission-info {
-    background-color: rgb(238, 39, 55);
-    /* column span */
-    grid-column-start: span 2;
-    text-align: center;
-    padding: 10px 20px;
-    
-}
-
-.about-container #about-first-image > img {
+.about-container #about-first-image > img, 
+.about-container #about-us-image > img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
-.about-container #vission-info {
-    background-color: rgb(238, 39, 55);
-    /* column span */
-    grid-column-start: span 2;
-    text-align: center;
-    padding: 10px 20px;
-    
-}
+
 
 /* media queries */
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
+    
     .about-container {
-        grid-template-columns: 1;
+      display: flex;
+      flex-wrap: wrap-reverse;
     }
+    
+    /* una de las imágenes desaparece */
+
+    .about-container #about-first-image > img{
+        display: none;
+    }
+
 }
 
 
@@ -346,8 +270,6 @@ h2 {
     background-attachment: fixed;
     text-align: center;
     height: auto;
-   
-   /* background-color: grey !important;*/
 
 }
 
@@ -360,37 +282,27 @@ h2 {
 .container h2 {
     padding: 0;
     margin: 0;
-}
-
-.sponsors-container h2{
     text-align: center;
     padding: 20px;
-
-   
 }
 
 #ROMIHN {
-    margin-top: 150px;
+
+    margin-top: 22%;
 }
 
 #Prepatec {
-    margin-top: 125px;
-    
+    margin-top: 18%;  
 }
 
 #DIM {
-    margin-top: 60px;
+    margin-top: 9%;
 }
 
 .slick-slide{
     margin: 0 40px;
 }
 
-.slick-slide img{
-    width: 50%;
-    height: 50%;
-
-}
 .slick-slider{
     position: relative;
     display: block;
@@ -418,6 +330,8 @@ h2 {
 .slick-slide img{
     display: block;
     margin: auto;
+    max-width: 50%;
+    max-height: 50%;
 }
 .slick-initialized .slick-slide{
     display: block;
@@ -425,6 +339,35 @@ h2 {
 .copy{
     padding-top: 250px;
     align-content: center;
+
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 662px) {
+    
+    .container {
+        padding-top: 30px;
+    }
+    .container p {
+        padding: 30px;
+        align-self: center;
+        font-size: 1rem;
+    }
+    
+    .container h2 {
+        padding: 0;
+        margin: 0 20px;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .slick-slide {
+        margin: 0;
+    }
+
+    header {
+        overflow: scroll;
+    }
 
 }
 
@@ -451,33 +394,8 @@ footer .contact-us-logos nav{
 footer .contact-us-logos nav:hover {
     transform:translateY(-15px); 
 }
+
 /* ------ BUTTONS ---------- */
-/*¨
-button {
-    font-family:'Inter', sans-serif;
-    color: rgb(238, 39, 55);
-    font-size: 1.5rem;
-    border-radius: 5px;
-    padding: 1rem;
-    width: 12rem;   
-    background-color: transparent;
-    border: 4px solid  rgb(238, 39, 55);
-    /* transition */
-    /*
-    box-shadow: inset 0 0 0 0  rgb(238, 39, 55);
-    transition: ease-out 0.3s;
-    outline: none;
-    margin: auto;
-}
-*/
-/*
-button:hover {
-    box-shadow: inset 12rem 0 0 0  rgb(238, 39, 55);
-    color: white;
-    cursor: pointer;
-    
-}
-*/
 
 button{
     font-family:'Inter', sans-serif;
